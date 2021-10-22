@@ -1,1 +1,6 @@
-
+data = input('Введите своё ФИО: ')
+data = data.split(' ')
+length = len(data)
+for x in range(length):
+    initials = list(data[x])
+    print(initials[0],'.', sep = '', end = ' ')
