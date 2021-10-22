@@ -1,1 +1,10 @@
-
+firstarg = input('Введите 1-ый аргумент (список чисел через пробел): ')
+firstarg = firstarg.split(' ')
+secondarg = int(input('Введите 2-ой аргумент (одно число "n"): '))
+num_greater_n = []
+def func(num_greater_n): 
+    for x in firstarg:
+        if int(x) > secondarg:
+            num_greater_n.append(x)
+    return num_greater_n
+print('Числа больше n в списке: ', func(num_greater_n))
