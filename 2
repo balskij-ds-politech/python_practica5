@@ -1,1 +1,15 @@
-
+rows=3
+cols=3
+square = [[0,0,0],[0,0,0],[0,0,0]]
+def main(square):
+    for r in range(rows):
+        for c in range(cols):
+            square[r][c]=int(input('Введите число: '))
+    if square[0][0] + square[0][1] + square[0][2] == square[1][0] + square[1][1] + square[1][2] == square[1][0] + square[1][1] + square[1][2] == square[2][0] + square[2][1] + square[2][2] == square[0][2] + square[1][2] + square[2][2] == square[0][0] + square[1][1] + square[2][2]:
+        print('Это магический квадрат Ло Шу')
+    else:
+        print ('Это не магический квадрат Ло Шу')
+    return(square)
+print('Это программа, проверяющая, является ли квадрат чисел магическим квадратом Ло Шу.\nВам лишь нужно 9 раз ввести числа от 1 до 9.\nПервые три ввода чисел являются первой строкой, вторые три ввода - второй строкой, остальные - третьей строкой.')
+main(square)
+print(square)
